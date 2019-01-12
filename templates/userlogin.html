@@ -1,92 +1,82 @@
 <html>
 	<head>
-	<!-- Compiled and minified CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-		<link rel="stylsheet" href="/style.css">
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	    <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	    <script>
+	    document.addEventListener('DOMContentLoaded', function() {
+		    var elems = document.querySelectorAll('.datepicker');
+		    var instances = M.Datepicker.init(elems, options);
+		});
+	    </script>
 	</head>
 	<body>
-		<nav> <!-- navbar content here  --> </nav>
-		  <ul id="slide-out" class="sidenav">
-		    <li><div class="user-view">
-		      <div class="background">
-		        <img src="images/office.jpg">
-		      </div>
-		      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-		      <a href="#name"><span class="white-text name">John Doe</span></a>
-		      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-		    </div></li>
-		    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-		    <li><a href="#!">Second Link</a></li>
-		    <li><div class="divider"></div></li>
-		    <li><a class="subheader">Subheader</a></li>
-		    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-		  </ul>
-		  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 		<center>
-			  <nav>
-			    <div class="nav-wrapper">
-			      <a href="#!" class="brand-logo center">Logo</a>
-			      <ul class="left hide-on-med-and-down">
-			      	<!-- <li class="active"><a href="collapsible.html">JavaScript</a></li>
-			        <li><a href="sass.html">Sass</a></li>
-			        <li><a href="badges.html">Components</a></li> -->
-			      </ul>
+			<div class="title">
+				<h2>Log In</h2>
+				<div class="row">
+					<div class="input-field col s12 inputs">
+			        	<input id="user" type="text" class="borderwhite validate">
+			        	<label for="user">Username</label>
+			        </div>
+			        <div class="input-field col s12 inputs pass">
+			        	<input id="password" type="password" class="borderwhite datepicker">
+			        	<label for="password">Password</label>
+			        </div>
 			    </div>
-			  </nav>
-			<h2>Sign up</h2>
-			<form method="POST" class="post-form">
-				{% csrf_token %}
-				<input type="hidden" name="csrfmiddlewaretoken" value="7ZIKS1QodLzSOqWXICfT6abiNZDKxPfM1DU72gH6mOT0liJk3EpBfpUS2nhUAUHP">
-					<p><label for="id_username">Username:</label> <input type="text" name="username" maxlength="20" required id="id_username"></p>
-					<p><label for="id_first_name">First name:</label> <input type="text" name="first_name" maxlength="30" required id="id_first_name"></p>
-					<p><label for="id_last_name">Last name:</label> <input type="text" name="last_name" maxlength="30" required id="id_last_name"></p>
-					<p><label for="id_email">Email:</label> <input type="text" name="email" style="text-transform:lowercase;" maxlength="40" required id="id_email"></p>
-					<p><label for="id_date_of_birth">Date of birth:</label> <input type="text" class="datepicker" name="date_of_birth" required id="id_date_of_birth"></p>
-					<p><label for="id_password">Password:</label> <input type="password" name="password" maxlength="128" required id="id_password"></p>
-				<button type="submit" class="save btn btn-default">Save</button>
-			</form>
-
-		</center>
+			</div>
+		<center>
 	</body>
 	<style>
-	.post-form{
-		width: 50%;
-		background-color: #39c68e;
+	html{
+		background-color: black;
+		background-image: url("Background.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 	}
-	.save{
-		margin-bottom: 14px;
+	h1{
+		margin-top: 88.985px;
+		margin-bottom: 0;
+		border: 0;
+		padding: 0;
 	}
-	.nav-wrapper{
-		background-color: #39c68e;
-	}
-	#id_username{
-
-	}
-	html {
-		background-color: #ffbf80;
-		color: white;
-	}
-	p {
-		margin-left: 14px;
-		margin-right: 14px;
+	a{
+		color: black;
+		margin: 14px;
 	}
 	label {
 		color: white;
 	}
-	input {
-		border-bottom: white;
+	.title{
+		background-color: #63ba97;
+		position: fixed;
+		top: 50%;
+		margin-top: -131.1845px;
+		margin-left: 179.375px;
+		width: 75%;
+		height: 35%;
+		color: white;
+	}
+	.nav-wrapper{
+		background-color: white;
+		color: black;
+	}
+	.btn-flat{
+		background-color: white;
+	}
+	.inputs{
+		color: white;
+	}
+	.input-field>label{
+		color: white;
+	}
+	.pass{
+		border-bottom: 14px;
+	}
+	input[type=text]:not(.browser-default), input[type=password]:not(.browser-default){
+		color: white;
+		border-color: white;
 	}
 	</style>
-	<script>
-	document.addEventListener('DOMContentLoaded', function() {
-    	var elems = document.querySelectorAll('.sidenav');
-    	var instances = M.Sidenav.init(elems, options);
-  	});
-	document.addEventListener('DOMContentLoaded', function() {
-		var elems = document.querySelectorAll('.datepicker');
-		var instances = M.Datepicker.init(elems, options);
-	});
-	</script>
 </html>
