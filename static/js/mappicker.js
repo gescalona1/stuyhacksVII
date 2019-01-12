@@ -53,7 +53,7 @@ console.log("init map");
 
     $prevEl.after( $('<div class="js-setloc-map setloc-map"></div>') );
 
-    var mapEl = document.getElementsByClassName('js-setloc-map')[0];
+    var mapEl = document.getElementById('map');
 
     map = new google.maps.Map(mapEl, {
       zoom: initial_zoom,
