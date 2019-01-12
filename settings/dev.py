@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    "django_google_maps",
     'accounts',
     'appointments',
 ]
@@ -124,10 +125,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+GOOGLE_MAPS_API_KEY = "AIzaSyDB2i7VJwjvCJc3sK4XCakfT3tmXQmD4lU"
 STATIC_URL = os.path.join(BASE_DIR, "static/")
 AUTH_USER_MODEL = "accounts.Member"
 LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("appointments_index")
 LOGOUT_REDIRECT_URL = reverse_lazy("index")
-print(get_user_model)

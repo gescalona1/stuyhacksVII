@@ -12,27 +12,23 @@ class AppointmentCreationForm(forms.ModelForm):
         fields = [
             'title',
             'description',
-            'location_name',
+            'address',
+            "geolocation",
             'due_time'
         ]
-        widgets = {
-            'email': forms.TextInput(attrs={
-                'style': 'text-transform:lowercase;'
-            }),
-            'password': forms.PasswordInput()
-        }
 
 
 class AppointmentChangeForm(forms.ModelForm):
     """
     This is for members
     """
-
     class Meta:
         model = Appointment
-        fields = ('title',
-                  'description',
-                  'location_name',
-                  'due_time'
+        fields = (
+            'title',
+            'description',
+            'address',
+            "geolocation",
+            'due_time'
         )
 
