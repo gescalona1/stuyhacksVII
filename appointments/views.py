@@ -19,10 +19,7 @@ def create(request):
         print(request.POST)
         form = AppointmentCreationForm(request.POST)
         if form.is_valid():
-            member = form.save()
-            print(member.password)
-            member.set_password(member.password)
-            member.save()
+            Appointment.objects.create
 
             return redirect("appointments_login")
             # do something.
