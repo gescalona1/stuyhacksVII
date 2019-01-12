@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .forms import *
 from django.contrib.auth.decorators import login_required, permission_required
 # Create your views here.
 
@@ -14,7 +15,20 @@ def index(request):
 @login_required
 def create(request):
     user = request.user
-    return HttpResponse(f"Hello {user.username} {request}")
+    if request.method == 'POST':
+        print(request.POST)
+        form = AppointmentCreationForm(request.POST)
+        if form.is_valid():
+            member = form.save()
+            print(member.password)
+            member.set_password(member.password)
+            member.save()
+
+            return redirect("appointments_login")
+            # do something.
+    else:
+        form = AppointmentCreationForm()
+    return render(request, 'appointment.html', {'form': form})
 
 
 # View specific appointment
