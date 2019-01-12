@@ -19,9 +19,8 @@ def create(request):
         print(request.POST)
         form = AppointmentCreationForm(request.POST)
         if form.is_valid():
-            Appointment.objects.create
-
-            return redirect("appointments_login")
+            appointment = Appointment.objects.create(request.POST)
+            return redirect("appointments_view")
             # do something.
     else:
         form = AppointmentCreationForm()
