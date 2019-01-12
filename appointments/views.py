@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 @login_required
 def index(request):
     user = request.user
-    return HttpResponse(f"Hello {user} {request}")
+    return render(request, 'appointmentindex.html')
 
 
 # Create appointment
@@ -26,7 +26,11 @@ def create(request):
             # do something.
     else:
         form = AppointmentCreationForm()
+<<<<<<< HEAD
+    return render(request, 'appointmentform.html', {'form': form})
+=======
     return render(request, 'appointment.html', {'form': form, 'api_key': settings.GOOGLE_MAPS_API_KEY})
+>>>>>>> 3289a35c952ef5d0b85a148d832ba18471d342b3
 
 
 # View specific appointment
