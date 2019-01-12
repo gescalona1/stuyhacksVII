@@ -1,91 +1,83 @@
 <html>
-
-	<head>
-
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	    <link rel="stylsheet" href="style.css">
-
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	    <script>
-	    document.addEventListener('DOMContentLoaded', function() {
-		    var elems = document.querySelectorAll('.datepicker');
-		    var instances = M.Datepicker.init(elems, options);
+<head>
+<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylsheet" href="/style.css">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		    var elems = document.querySelectorAll('.sidenav');
+		    var instances = M.Sidenav.init(elems, options);
 		});
-	    </script>
-	</head>
-	<body>
-		<center>
-			<div class="title">
-				<h3>Register an Appointment</h3>
-					<div class="formborder">
-			        <form class="col s12" action="/your-name/" method="post">
-			            	<input type='hidden' name='csrfmiddlewaretoken' value='V5QLKcsAJLON2KIZfmz0EQAmWzmbqOt49nao88qy4e2CZWQeMcx0ctaJ6PcJ5CtK' />
-			            	<label for="id_title">Title:</label>
-			            	<input class="validate" type="text" name="title" maxlength="30" required id="id_title" />
-							<label for="id_description">Description:</label>
-							<input class="validate" type="text" name="description" maxlength="40" required id="id_description" />
-							<label for="id_address">Address:</label>
-							<input class="validate" type="text" name="address" maxlength="200" required id="id_address" />
-							<label for="id_geolocation">Geolocation:</label>
-							<input class="validate" type="text" name="geolocation" maxlength="100" required id="id_geolocation" />
-							<label for="id_due_time">Due time:</label>
-							<input class="validate" type="text" name="due_time" required id="id_due_time" />
-			        	<button type="submit" class="save btn btn-default" value="Submit">Submit</button>
-			        </form>
-			        </div>
-			    </div>
-			</div>
-		</center>
-	</body>
-	<style>
-	html{
-		background-color: black;
-		background-image: url(https://i.imgur.com/xEFGf9u.png);
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-	}
-	h1{
-		margin-top: 88.985px;
-		margin-bottom: 0;
-		border: 0;
-		padding: 0;
-	}
-	a{
-		color: black;
-		margin: 14px;
-	}
-	label{
-		color: white;
-	}
-	form{
-		border: 15px;
-	}
-	.title{
-		background-color: #63ba97;
-		position: fixed;
-		top: 35%;
-		margin-top: -131.1845px;
-		margin-left: 179.375px;
-		width: 75%;
-		height: auto;
-		color: white;
-	}
-	.nav-wrapper{
-		background-color: white;
-		color: black;
-	}
-	.btn-flat{
-		background-color: white;
-	}
-	.inputs{
-		color: white;
-	}
-	.formborder{
-		padding: 14px;
-	}
-	input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
-		border-color: white;
-	}
-	</style>
+		</script>
+		<style>
+		.background{
+			background-color: #63ba97;
+		}
+		.time{
+			font-style: italic;
+			height: 20px;
+			margin: 0;
+			font-size: 12px;
+		}
+    .faded{
+      height: 100%;
+      filter: opacity(30%);
+    }
+    .details{
+      background-color: #63ba97;
+      position: fixed;
+      top: 50%;
+      margin-top: -140px;
 
+      width: 50%;
+      left: 25%;
+      height: 45%;
+      color: white;
+    }
+		</style>
+</head>
+<body>
+	<div id="placeholder"></div>
+  <div class="faded">
+  	<ul id="slide-out" class="sidenav" style="transform: translateX(0%);">
+            <li>
+              <div class="user-view">
+                <div class="background">
+                </div>
+                <a href="#user">
+                  <img class="circle" src="https://i.stack.imgur.com/dr5qp.jpg">
+                </a>
+                <a href="#name">
+                  <span class="white-text name" id="name">Name</span>
+                </a>
+                <a href="#email">
+                  <span class="white-text email" id="email">Email</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="#!">Appointment 1</a>
+            </li>
+            <li>
+              <a href="#!">Appointment 2</a>
+            </li>
+            <li>
+              <a href="#!">Appointment 3</a>
+            </li>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a class="waves-effect" href="#!">Add an appointment</a>
+            </li>
+    </ul>
+  </div>
+  <center>
+    <div class="details">
+    <h3>Appointment 1</h3>
+    </div>
+  </center>
+</body>
 </html>
