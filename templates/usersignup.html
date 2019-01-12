@@ -7,37 +7,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	</head>
 	<body>
-		<nav> <!-- navbar content here  --> </nav>
-		  <ul id="slide-out" class="sidenav">
-		    <li><div class="user-view">
-		      <div class="background">
-		        <img src="images/office.jpg">
-		      </div>
-		      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-		      <a href="#name"><span class="white-text name">John Doe</span></a>
-		      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-		    </div></li>
-		    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-		    <li><a href="#!">Second Link</a></li>
-		    <li><div class="divider"></div></li>
-		    <li><a class="subheader">Subheader</a></li>
-		    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-		  </ul>
-		  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 		<center>
-			  <nav>
-			    <div class="nav-wrapper">
-			      <a href="#!" class="brand-logo center">Logo</a>
-			      <ul class="left hide-on-med-and-down">
-			      	<!-- <li class="active"><a href="collapsible.html">JavaScript</a></li>
-			        <li><a href="sass.html">Sass</a></li>
-			        <li><a href="badges.html">Components</a></li> -->
-			      </ul>
-			    </div>
-			  </nav>
-			<h2>Sign up</h2>
 			<form method="POST" class="post-form">
 				{% csrf_token %}
+					<h2>Sign up</h2>
 					<p>
 						<label for="id_username">Username:</label>
 						<input type="text" name="username" maxlength="20" required id="id_username">
@@ -82,7 +55,7 @@
 
 	}
 	html {
-		background-color: #ffbf80;
+		background-image:  url('https://i.imgur.com/xEFGf9u.png');
 		color: white;
 	}
 	p {
@@ -94,6 +67,13 @@
 	}
 	input {
 		border-bottom: white;
+	}
+	h2 {
+		margin:5%;
+		border-top: 14px;
+	}
+	form {
+		border-top: 14px;
 	}
 	</style>
 	<script>

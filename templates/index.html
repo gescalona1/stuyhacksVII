@@ -10,7 +10,7 @@
 			html{
 				background-color: black;
 				{% load static %}
-				background-image:  url('{% static "my_app/example.jpg" %}')
+				background-image:  url('https://i.imgur.com/xEFGf9u.png');
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
 			}
@@ -43,8 +43,8 @@
 	</style>
 	</head>
 	<body>
-	    <a class="waves-effect waves-teal btn-flat left" id="login" href="">Log In</a>
-	    <a class="waves-effect waves-teal btn-flat right" id="signup" href="">Sign Up</a>
+	    <a class="waves-effect waves-teal btn-flat left" id="login" href="/accounts/login">Log In</a>
+	    <a class="waves-effect waves-teal btn-flat right" id="signup" href="/accounts/signup">Sign Up</a>
 		<center>
 			<div class="title">
 				<h1>NAME</h1>
