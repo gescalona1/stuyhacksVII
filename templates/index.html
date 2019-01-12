@@ -7,16 +7,8 @@
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	</head>
 	<body>
-		<nav>
-		    <div class="nav-wrapper">
-		    	<a href="#" class="brand-logo center">Logo</a>
-		    	<ul id="nav-mobile" class="left hide-on-med-and-down">
-		        <li><a href="sass.html">Sass</a></li>
-		        <li><a href="badges.html">Components</a></li>
-		        <li><a href="collapsible.html">JavaScript</a></li>
-		    	</ul>
-		    </div>
-		</nav>
+	    <a class="waves-effect waves-teal btn-flat left" id="login">Log In</a>
+	    <a class="waves-effect waves-teal btn-flat right" id="signup">Sign Up</a>
 		<center>
 			<div class="title">
 				<h1>NAME</h1>
@@ -26,19 +18,37 @@
 	</body>
 	<style>
 	html{
-		background-color: #f0ebb4;
+		background-color: black;
+		background-image: url("Background.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		filter: blur(50%);
 	}
 	h1{
-		margin: 0;
+		margin-top: 88.985px;
+		margin-bottom: 0;
 		border: 0;
 		padding: 0;
 	}
+	a{
+		color: black;
+		margin: 14px;
+	}
 	.title{
 		background-color: #63ba97;
-		margin: 0 auto;
+		position: fixed;
+		top: 50%;
+		margin-top: -131.1845px;
+		width: 100%;
+		height: 33.33%;
+		color: white;
 	}
 	.nav-wrapper{
-		background: none;
+		background-color: white;
+		color: black;
+	}
+	.btn-flat{
+		background-color: white;
 	}
 	</style>
 </html>
