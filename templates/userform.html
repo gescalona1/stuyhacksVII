@@ -35,9 +35,7 @@
 			    </div>
 			  </nav>
 			<h2>Sign up</h2>
-			<form method="POST" class="post-form">
-				{% csrf_token %}
-				<input type="hidden" name="csrfmiddlewaretoken" value="7ZIKS1QodLzSOqWXICfT6abiNZDKxPfM1DU72gH6mOT0liJk3EpBfpUS2nhUAUHP">
+			<form method="POST" class="post-form"> {% csrf_token %}
 					<p><label for="id_username">Username:</label> <input type="text" name="username" maxlength="20" required id="id_username"></p>
 					<p><label for="id_first_name">First name:</label> <input type="text" name="first_name" maxlength="30" required id="id_first_name"></p>
 					<p><label for="id_last_name">Last name:</label> <input type="text" name="last_name" maxlength="30" required id="id_last_name"></p>

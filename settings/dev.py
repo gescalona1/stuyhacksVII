@@ -131,5 +131,4 @@ STATIC_URL = os.path.join(BASE_DIR, "static/")
 AUTH_USER_MODEL = "accounts.Member"
 LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("appointments_index")
-LOGOUT_REDIRECT_URL = reverse_lazy("index")
 print(STATIC_URL)

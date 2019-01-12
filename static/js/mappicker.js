@@ -3,10 +3,11 @@
  * Creating or dragging the marker sets the latitude and longitude values
  * in the input fields.
  */
+console.log("init map");
 ;(function($) {
 
   // We'll insert the map after this element:
-  var prev_el_selector = '.form-row.field-longitude';
+  var prev_el_selector = '#id_longitude';
 
   // The input elements we'll put lat/lon into and use
   // to set the map's initial lat/lon.
