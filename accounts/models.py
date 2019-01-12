@@ -12,25 +12,25 @@ import datetime
 class Member(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(
         _('username'),
-        help_text="Your username",
+        help_text= None,
         unique=True,
         max_length=20)
     email = models.CharField(
         _('email'),
-        help_text="Your email",
+        help_text=None,
         unique=True,
         max_length=40)
     first_name = models.CharField(
         _('first name'),
-        help_text="Your first name",
+        help_text=None,
         max_length=30)
     last_name = models.CharField(
         _('last name'),
-        help_text="Your last name",
+        help_text=None,
         max_length=30)
     date_of_birth = models.DateField(
         _('date of birth'),
-        help_text="Your birth (MM/DD/YYYY)")
+        help_text=None)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     is_staff = models.BooleanField(_('staff'), default=False)
     is_active = models.BooleanField(_('active'), default=True)
