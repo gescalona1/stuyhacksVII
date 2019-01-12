@@ -40,7 +40,7 @@ def login(request):
         if member is not None:
             if member.is_active:
                 auth_login(request, member)
-                redirect("appointments_index")
+                return redirect("appointments_index")
             else:
                 return HttpResponse(f"Failed active test")
         else:

@@ -20,6 +20,7 @@ import appointments.views as views
 urlpatterns = [
     path(u'', views.index, name="appointments_index"),
     path(u'create', views.create, name="appointments_create"),
+    path(u'1', views.fake1, name="fake1"),
     path(u'<int:appointment_id>', views.view, name="appointments_view"),
     path(u'<int:appointment_id>/remove', views.remove, name="appointments_remove"),
 ]

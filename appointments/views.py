@@ -37,6 +37,11 @@ def view(appointment_id, request):
 
 
 # Remove Appointment
+
+def fake1(request):
+    return render(request, 'appointmentOne.html')
+
+
 @login_required
 def remove(appointment_id, request):
     user = request.user

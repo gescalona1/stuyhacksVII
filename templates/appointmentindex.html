@@ -12,6 +12,12 @@
 		});
 		</script>
 		<style>
+		html {
+				background-color: black;
+				background-image:  url('http://i.imgur.com/xEFGf9u.png');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
 		.background{
 			background-color: #63ba97;
 		}
@@ -54,7 +60,7 @@
             </div>
           </li>
           <li>
-            <a href="#!">Appointment 1</a>
+            <a href="{% url 'fake1' %}">Appointment 1</a>
           </li>
           <li>
             <a href="#!">Appointment 2</a>
@@ -70,4 +76,3 @@
           </li>
         </ul>
 </body>
-</html>
