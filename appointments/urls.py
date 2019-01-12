@@ -15,17 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
-
-
-def index(request):
-    return HttpResponse(f"Hello this is index")
-
+import appointments.views as views
 
 urlpatterns = [
-    path(u'admin/', admin.site.urls),
-    path(r'', index, name="index"),
-    path(u'accounts/', include('accounts.urls'), name="accounts"),
+    path(u'', views.index, name="appointments_index"),
+    path(u'create', views.create, name="appointments_create"),
+    path(u'<int:appointment_id>', views.view, name="appointments_view"),
+    path(u'<int:appointment_id>/remove', views.remove, name="appointments_remove"),
 ]
-
-
