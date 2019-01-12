@@ -41,19 +41,20 @@
             <div class="user-view">
               <div class="background">
               </div>
+                <a class="waves-effect waves-teal btn-flat right" id="signup" href="{% url 'logout' %}">Log out</a>
               <a href="#user">
                 <img class="circle" src="https://i.stack.imgur.com/dr5qp.jpg">
               </a>
               <a href="#name">
-                <span class="white-text name" id="name">Name</span>
+                <span class="white-text name" id="name">User: {{user.username}}</span>
               </a>
               <a href="#email">
-                <span class="white-text email" id="email">Email</span>
+                <span class="white-text email" id="email">Email: {{user.email}}</span>
               </a>
             </div>
           </li>
           <li>
-            <a href="#!" href="/">Appointment 1</a>
+            <a href="#!">Appointment 1</a>
           </li>
           <li>
             <a href="#!">Appointment 2</a>
@@ -65,7 +66,7 @@
             <div class="divider"></div>
           </li>
           <li>
-            <a class="waves-effect" href="#!">Add an appointment</a>
+            <a class="waves-effect" href="{% url 'appointments_create' %}">Add an appointment</a>
           </li>
         </ul>
 </body>
