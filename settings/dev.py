@@ -127,8 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 GOOGLE_MAPS_API_KEY = "AIzaSyCryEnIekqeKM1QqNDE8WCilp0hdOhsme4"
 STATIC_URL = os.path.join(BASE_DIR, "static/")
+
 AUTH_USER_MODEL = "accounts.Member"
 LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("appointments_index")
-LOGOUT_REDIRECT_URL = reverse_lazy("index")
 print(STATIC_URL)

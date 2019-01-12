@@ -9,6 +9,8 @@ from django.contrib.auth.decorators import login_required, permission_required
 
 
 def signup(request):
+    if request.user is not None and request.user.is_authenticated:
+        return HttpResponse("You are already logged in!")
     if request.method == 'POST':
         print(request.POST)
         form = MemberCreationForm(request.POST)
@@ -38,6 +40,7 @@ def login(request):
         if member is not None:
             if member.is_active:
                 auth_login(request, member)
+                redirect("appointments_index")
             else:
                 return HttpResponse(f"Failed active test")
         else:
