@@ -125,7 +125,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-GOOGLE_MAPS_API_KEY = "AIzaSyDB2i7VJwjvCJc3sK4XCakfT3tmXQmD4lU"
+GOOGLE_MAPS_API_KEY = "AIzaSyCryEnIekqeKM1QqNDE8WCilp0hdOhsme4"
 STATIC_URL = os.path.join(BASE_DIR, "static/")
 AUTH_USER_MODEL = "accounts.Member"
 LOGIN_URL = reverse_lazy("login")

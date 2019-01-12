@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 @login_required
 def index(request):
     user = request.user
-    return HttpResponse(f"Hello {user} {request}")
+    return render(request, 'appointmentindex.html')
 
 
 # Create appointment
@@ -25,7 +25,7 @@ def create(request):
             # do something.
     else:
         form = AppointmentCreationForm()
-    return render(request, 'appointment.html', {'form': form})
+    return render(request, 'appointmentform.html', {'form': form})
 
 
 # View specific appointment
